@@ -1,0 +1,21 @@
+.logo{
+  letter-spacing: 5px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+}
+
+.navbar-nav{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
