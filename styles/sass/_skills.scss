@@ -1,57 +1,56 @@
-.skills {
-  min-height: max-content;
-  max-width: 90rem;
-  margin: auto;
-}
-
-.title-heading {
-  text-align: center;
-  margin-bottom: 5rem;
-}
-
-.title-heading h2 {
-  font-size: 2rem;
-  margin: 0.5rem 0 1rem 0;
-}
-
-.title-heading p {
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 5rem;
-}
-
-.skills-tiers {
+.skills-container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2.5rem;
-}
-
-.tier-item {
-  height: 30rem;
-  padding: 3rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  cursor: default;
+  -ms-grid-columns: (180px)[6];
+      grid-template-columns: repeat(6, 180px);
+  -ms-grid-rows: 150px 150px;
+      grid-template-rows: 150px 150px;
 }
 
-.tier-item i {
-  font-size: 3.5rem;
+.skills-container i {
+  font-size: 6rem;
+  margin: 10px;
 }
 
-.tier-item h2 {
-  font-size: 2rem;
-  margin: 2rem 0;
-  background: linear-gradient(
-    to right,
-    rgba(249, 105, 14, 1) 0%,
-    rgba(102, 51, 153, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.skills-container .icon-name {
+  opacity: 0;
+  color: #545629;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
 }
 
-.tier-item p {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
+.skills-container .individual-skill:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  color: #545629;
+}
+
+.skills-container .individual-skill:hover .icon-name {
+  opacity: 1;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.individual-skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#skills > div:nth-child(1) > h2:nth-child(1) {
+  text-align: center;
 }

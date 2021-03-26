@@ -242,7 +242,7 @@ html {
 
 html {
   font-family: 'Share Tech', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
@@ -628,70 +628,63 @@ hr {
   height: 1px;
 }
 
-.skills {
-  min-height: -webkit-max-content;
-  min-height: -moz-max-content;
-  min-height: max-content;
-  max-width: 90rem;
-  margin: auto;
-}
-
-.title-heading {
-  text-align: center;
-  margin-bottom: 5rem;
-}
-
-.title-heading h2 {
-  font-size: 2rem;
-  margin: 0.5rem 0 1rem 0;
-}
-
-.title-heading p {
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 5rem;
-}
-
-.skills-tiers {
+.skills-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 180px [6];
+  grid-template-columns: repeat(6, 180px);
+  -ms-grid-rows: 150px 150px;
+  grid-template-rows: 150px 150px;
 }
 
-.tier-item {
-  height: 30rem;
-  padding: 3rem;
-  position: relative;
+.skills-container i {
+  font-size: 6rem;
+  margin: 10px;
+}
+
+.skills-container .icon-name {
+  opacity: 0;
+  color: #545629;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.skills-container .individual-skill:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  color: #545629;
+}
+
+.skills-container .individual-skill:hover .icon-name {
+  opacity: 1;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.individual-skill {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: default;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.tier-item i {
-  font-size: 3.5rem;
-}
-
-.tier-item h2 {
-  font-size: 2rem;
-  margin: 2rem 0;
-  background: -webkit-gradient(linear, left top, right top, from(#f9690e), to(rebeccapurple));
-  background: linear-gradient(to right, #f9690e 0%, rebeccapurple 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.tier-item p {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
+#skills > div:nth-child(1) > h2:nth-child(1) {
+  text-align: center;
 }
 
 .projects {
@@ -700,6 +693,10 @@ hr {
   min-height: max-content;
   max-width: 70rem;
   margin: auto;
+}
+
+.title-heading {
+  text-align: center;
 }
 
 .has-margin-right {
@@ -816,6 +813,16 @@ footer a {
 .footer-social a {
   margin: 0 0.5rem;
   font-size: 2rem;
+}
+
+@media (max-width: 1100px) {
+  .skills-container {
+    -ms-grid-columns: 180px [4];
+    grid-template-columns: repeat(4, 180px);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 750px) {
