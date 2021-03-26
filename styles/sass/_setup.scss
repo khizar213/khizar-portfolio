@@ -15,14 +15,34 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 }
 
 // HTML general formatting
-html{
-  font-size: 62.5%;
-  font-family: 'Roboto', sans-serif;
+html {
+  font-family: 'Share Tech', sans-serif;  
+  font-size: 12px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: #e7e7e7;
+  background: rgb(19, 19, 19);
 }
 
-// Wrapper formatting
-.wrapper{
-  max-width: 1280px;
-  width: 80%;
-  margin: 0 auto;
+a {
+  text-decoration: none;
+  color: rgb(3, 155, 155);
+}
+
+a:hover {
+  color: rgba(249, 105, 14, 1);
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
